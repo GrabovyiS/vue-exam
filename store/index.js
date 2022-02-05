@@ -58,7 +58,12 @@ export const actions = {
   fetchForm({ commit }) {
     fetch("https://demo-api.vsdev.space/api/brom/sales/form")
       .then((response) => response.json())
-      .then((widget) => commit("ADD_WIDGET", widget));
+      .then((form) => commit("ADD_FORM", form));
+  },
+  updateSales({ commit }) {
+    fetch("https://demo-api.vsdev.space/api/brom/sales")
+      .then((response) => response.json())
+      .then((sales) => commit("ADD_SALES", sales));
   },
 };
 
@@ -73,9 +78,13 @@ export const getters = {
     return state.about;
   },
   widget(state) {
+    console.log(state.widget);
     return state.widget;
   },
   form(state) {
     return state.form;
+  },
+  formIsLoaded(state) {
+    return state.formIsLoaded;
   },
 };

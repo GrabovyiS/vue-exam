@@ -67,12 +67,12 @@ export default {
       fixed: false,
       items: [
         {
-          icon: "mdi-chart-bubble",
+          icon: "mdi-apps",
           title: "Главная",
           to: "/",
         },
         {
-          icon: "mdi-apps",
+          icon: "mdi-chart-bubble",
           title: "О нас",
           to: "/about",
         },
